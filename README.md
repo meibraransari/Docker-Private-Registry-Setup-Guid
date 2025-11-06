@@ -168,18 +168,6 @@ docker exec -it registry_server cat /etc/distribution/config.yml
 ```
 
 
-
-## 🌐 Nginx Reverse Proxy Configuration
-
-### 🧩 Nginx Proxy Manager (NPM) → Host → Advanced Tab
-
-```nginx
-client_max_body_size 2000M;
-client_max_body_size 0; # Unlimited
-```
-
-
-
 ## 🧭 DNS & Host Configuration
 
 Add DNS entry in **Pi-hole** or your local DNS:
@@ -195,6 +183,8 @@ Or, if DNS is not configured, add to `/etc/hosts`:
 ```
 
 
+## 🌐 Nginx Reverse Proxy Configuration
+
 
 ## 🌍 Nginx Proxy Manager Setup
 
@@ -207,6 +197,12 @@ Add a new proxy host:
 | **Forward IP** | `192.168.1.102`                   |
 | **SSL**        | Apply wildcard SSL certificate ✅  |
 
+### 🧩 Nginx Proxy Manager (NPM) → Host → Advanced Tab
+
+```nginx
+client_max_body_size 2000M;
+client_max_body_size 0; # Unlimited
+```
 
 
 ## 🔑 Test Docker Login
