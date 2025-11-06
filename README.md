@@ -1,7 +1,7 @@
 # 🐳 **Private Docker Registry Setup Guide**
 
 <p align="center">
-  <img src="./assets/docker_registry.png" alt="Logo" width="200" height="200"/>
+  <img src="./assets/docker_registry.png" alt="Logo" width="300" height="300"/>
 </p>
 
 ## 🧠 What is a Docker Private Registry?
