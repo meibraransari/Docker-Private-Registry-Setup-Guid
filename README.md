@@ -174,6 +174,7 @@ Add DNS entry in **Pi-hole** or your local DNS:
 
 ```
 hub.devopsinaction.lab → 192.168.1.102
+hubdash.devopsinaction.lab → 192.168.1.102
 ```
 
 Or, if DNS is not configured, add to `/etc/hosts`:
