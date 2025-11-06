@@ -1,7 +1,3 @@
----
-created: 2025-11-03T21:42:27+05:30
-updated: 2025-11-06T06:40:13+05:30
----
 # 🐳 **Private Docker Registry Setup Guide**
 
 <p align="center">
