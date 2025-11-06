@@ -180,22 +180,25 @@ Or, if DNS is not configured, add to `/etc/hosts`:
 
 ```bash
 192.168.1.102 hub.devopsinaction.lab
+192.168.1.102 hubdash.devopsinaction.lab
 ```
 
 
 ## 🌐 Nginx Reverse Proxy Configuration
 
 
-## 🌍 Nginx Proxy Manager Setup
+## 🌍 Nginx Proxy Manager Setup for Docker Registry
 
 Add a new proxy host:
 
 
 | Setting        | Value                             |
 | --------------- | --------------------------------- |
-| **Domain**     | `https://hub.devopsinaction.lab/` |
+| **Domain**     | `hub.devopsinaction.lab` |
 | **Forward IP** | `192.168.1.102`                   |
-| **SSL**        | Apply wildcard SSL certificate ✅  |
+| **Port** | `5000`                   |
+| **SSL**        | Apply SSL certificate ✅  |
+| **Force SSL**        | Enable  |
 
 ### 🧩 Nginx Proxy Manager (NPM) → Host → Advanced Tab
 
@@ -203,6 +206,20 @@ Add a new proxy host:
 client_max_body_size 2000M;
 client_max_body_size 0; # Unlimited
 ```
+
+## 🌍 Nginx Proxy Manager Setup for Docker Registry GUI
+
+Add a new proxy host:
+
+
+| Setting        | Value                             |
+| --------------- | --------------------------------- |
+| **Domain**     | `hubdash.devopsinaction.lab` |
+| **Forward IP** | `192.168.1.102`                   |
+| **Port** | `8080`                   |
+| **SSL**        | Apply SSL certificate ✅  |
+| **Force SSL**        | Enable  |
+
 
 
 ## 🔑 Test Docker Login
