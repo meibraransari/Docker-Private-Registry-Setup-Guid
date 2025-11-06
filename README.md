@@ -97,6 +97,44 @@ Create and edit the `compose.yaml` file:
 nano compose.yaml
 ```
 
+```yaml
+services:
+  registry-server:
+    image: registry:3
+    container_name: registry_server
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      REGISTRY_STORAGE_DELETE_ENABLED: 'true'
+      OTEL_TRACES_EXPORTER: none
+      OTEL_LOGS_EXPORTER: none
+      REGISTRY_AUTH: htpasswd
+      REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
+      REGISTRY_AUTH_HTPASSWD_PATH: /auth/registry.password
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /var/lib/registry
+      REGISTRY_HTTP_SECRET: hqMKYDHm9PJZf1aoz3xGJRJm8pmia8eY1
+      REGISTRY_LOG_LEVEL: info
+    volumes:
+      - ${DOCKER_VOLUME_STORAGE:-/mnt/docker-volumes}/registry_data:/var/lib/registry
+      - ${DOCKER_VOLUME_STORAGE:-/mnt/docker-volumes}/auth:/auth
+    labels:
+      version: "latest"
+      description: "Deployed on 02-11-2025"
+  registry-ui:
+    image: klausmeyer/docker-registry-browser
+    container_name: registry_ui
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      SECRET_KEY_BASE: "${SECRET_KEY_BASE}"  # Secret key for session and cookie encryption
+      DOCKER_REGISTRY_URL: "http://registry-server:5000"  # URL of your Docker registry
+      ENABLE_DELETE_IMAGES: "true"
+    labels:
+      version: "latest"
+      description: "Deployed on 06-11-2025"
+```
 Then start the stack:
 
 ```bash
