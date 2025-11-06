@@ -202,9 +202,9 @@ docker push hub.devopsinaction.lab/network-debug-tools
 
 Access the Registry UI:
 
-🔗 **URL:** [https://hubdash.devopsinaction.lab/](https://hubdash.devopsinaction.lab/)
-👤 **Username:** `docker`
-🔒 **Password:** `docker`
+- 🔗 **URL:** [https://hubdash.devopsinaction.lab/](https://hubdash.devopsinaction.lab/)
+- 👤 **Username:** `docker`
+- 🔒 **Password:** `docker`
 
 
 
