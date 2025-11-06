@@ -2,15 +2,11 @@
 created: 2025-11-03T21:42:27+05:30
 updated: 2025-11-06T06:40:13+05:30
 ---
-# 🐳 Private Docker Registry Setup Guide
-
-
-
-Here’s your updated **Private Docker Registry Setup Guide** with an explanation of what a Docker private registry is and emojis added to all major headings for clarity and style 👇
-
----
-
 # 🐳 **Private Docker Registry Setup Guide**
+
+<p align="center">
+  <img src="./assets/docker_registry.png" alt="Logo" width="120" height="120"/>
+</p>
 
 ## 🧠 What is a Docker Private Registry?
 
@@ -23,7 +19,6 @@ It’s ideal for organizations that need to:
 
 You can host it on your own infrastructure or within a cloud environment, using Docker’s built-in registry image (`registry:3`).
 
-![Icon](./assets/docker_registry.png)
 
 ## ⚙️ **Prerequisites**
 
