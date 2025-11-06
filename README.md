@@ -162,11 +162,13 @@ Or, if DNS is not configured, add to `/etc/hosts`:
 
 Add a new proxy host:
 
+
 | Setting        | Value                             |
-| -- |  |
+| --------------- | --------------------------------- |
 | **Domain**     | `https://hub.devopsinaction.lab/` |
 | **Forward IP** | `192.168.1.102`                   |
 | **SSL**        | Apply wildcard SSL certificate ✅  |
+
 
 
 ## 🔑 Test Docker Login
