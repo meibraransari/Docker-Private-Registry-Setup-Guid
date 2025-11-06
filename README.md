@@ -192,10 +192,11 @@ Or directly:
 docker login https://hub.devopsinaction.lab/ -u docker -p docker
 ```
 
-Push Image
+Push Image:
+```
 docker tag ibraransaridocker/network-debug-tools hub.devopsinaction.lab/network-debug-tools
 docker push hub.devopsinaction.lab/network-debug-tools
-
+```
 
 ## 🖥️ Test Web GUI
 
